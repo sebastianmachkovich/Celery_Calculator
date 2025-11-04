@@ -49,14 +49,17 @@ python main.py
 ## Project Structure
 
 ```
-app/
-├── __init__.py          - Celery app setup
-├── calculator.py        - Calculator logic
-└── tasks.py             - Celery tasks
-worker/
-└── worker.py            - Worker process
-celery_config.py         - Redis configuration
-main.py                  - Client application
+.
+├── README.md
+├── app
+│   ├── __init__.py       - Celery app setup
+│   ├── calculator.py     - Calculator logic
+│   └── tasks.py          - Celery tasks
+├── celery_config.py      - Redis configuration
+├── main.py               - Client application
+├── requirements.txt
+└── worker
+    └── worker.py         - Worker process
 ```
 
 ## Troubleshooting
