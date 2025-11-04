@@ -52,11 +52,11 @@ python main.py
 app/
 ├── __init__.py          - Celery app setup
 ├── calculator.py        - Calculator logic
-└── tasks.py            - Celery tasks
+└── tasks.py             - Celery tasks
 worker/
-└── worker.py           - Worker process
-celery_config.py        - Redis configuration
-main.py                 - Client application
+└── worker.py            - Worker process
+celery_config.py         - Redis configuration
+main.py                  - Client application
 ```
 
 ## Troubleshooting
