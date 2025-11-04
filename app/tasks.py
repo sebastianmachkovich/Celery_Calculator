@@ -1,5 +1,5 @@
 from app import app
-from app.calculator import Calculator
+from app import calculator as calc
 import redis
 
 redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
@@ -7,7 +7,7 @@ redis_client = redis.Redis(host='localhost', port=6379, db=0, decode_responses=T
 @app.task(name='app.tasks.calculate')
 def calculate(a, b, operation):
     try:
-        result = Calculator.calculate(a, b, operation)
+        result = calc.calculate(a, b, operation)
         redis_client.hincrby('operation_frequency', operation, 1)
         
         return {
